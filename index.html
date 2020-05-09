@@ -4,13 +4,16 @@
 <head>
   <meta charset="utf-8">
   <title>Барбершоп "Бородинский"</title>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+  <link href="css/normalize.css.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
   <header class="main-header">
     <nav class="main-navigation">
       <a class="main-header-logo" href="index.html">
-        <img src="img/index-logo.svg" width="111" height="24" alt="Логотип барбершопа Бородинский">
+        <img src="img/index-logo.png" alt="Логотип барбершопа Бородинский">
       </a>
       <ul class="site-navigation">
         <li><a href="info.html">Информация</a></li>
@@ -33,17 +36,17 @@
 
     <section>
       <h2>Преимущества</h2>
-      <ul>
-        <li>
+      <ul class="feature-list">
+        <li class="feature-item">
           <h3>Быстро</h3>
           <p>МЫ ДЕЛАЕМ СВОЮ РАБОТУ БЫСТРО! ДВА ЧАСА ПРОЛЕТЯТ НЕЗАМЕТНО И ВЫ — СЧАСТЛИВЫЙ ОБЛАДАТЕЛЬ СТИЛЬНОЙ
             СТРИЖКИ-МИНУТКИ!</p>
         </li>
-        <li>
+        <li class="feature-item">
           <h3>Круто</h3>
           <p>ЗАБУДЬТЕ, КАК ВЫ СТРИГЛИСЬ РАНЬШЕ. МЫ СДЕЛАЕМ ИЗ ВАС ЗВЕЗДУ ФУТБОЛА ИЛИ КИНО! ВО ВСЯКОМ СЛУЧАЕ ВНЕШНЕ.</p>
         </li>
-        <li>
+        <li class="feature-item">
           <h3>Дорого</h3>
           <p>НАШИ МАСТЕРА — ПРОФЕССИОНАЛЫ СВОЕГО ДЕЛА И НЕ МОГУТ СТОИТЬ ДЕШЕВО. К ТОМУ ЖЕ, РАЗВЕ ЦЕНА НЕ ДАЕТ
             ОПРЕДЕЛЕННЫЙ СТАТУС?</p>
@@ -51,69 +54,73 @@
       </ul>
     </section>
 
-    <section>
-      <h2>Новости</h2>
-      <ul>
-        <li>
-          <p>НАМ НАКОНЕЦ ЗАВЕЗЛИ ЯГЕРМАЙСТЕР! ТЕПЕРЬ ВЫ МОЖЕТЕ ПРОПУСТИТЬ СТАКАНЧИК ВО ВРЕМЯ СТРИЖКИ</p>
-          <time datetime="2020-05-07">7 мая</time>
-        </li>
-        <li>
-          <p>В НАШЕЙ КОМАНДЕ ПОПОЛНЕНИЕ, БОРИС «БРИТВА» СТРИГУНЕЦ, ОБЛАДAТЕЛЬ МНОЖЕСТВА ТИТУЛОВ И НАГРАД ПОПОЛНИЛ НАШИ
-            СТРОЙНЫЕ РЯДЫ</p>
-          <time datetime="2019-01-18">18 января</time>
-        </li>
-      </ul>
-      <a href="news.html">Все новости</a>
-    </section>
+    <div class="index-columns">
+      <section class="news">
+        <h2>Новости</h2>
+        <ul class="news-list">
+          <li class="news-item">
+            <p>НАМ НАКОНЕЦ ЗАВЕЗЛИ ЯГЕРМАЙСТЕР! ТЕПЕРЬ ВЫ МОЖЕТЕ ПРОПУСТИТЬ СТАКАНЧИК ВО ВРЕМЯ СТРИЖКИ</p>
+            <time datetime="2020-05-07">7 мая</time>
+          </li>
+          <li class="news-item">
+            <p>В НАШЕЙ КОМАНДЕ ПОПОЛНЕНИЕ, БОРИС «БРИТВА» СТРИГУНЕЦ, ОБЛАДAТЕЛЬ МНОЖЕСТВА ТИТУЛОВ И НАГРАД ПОПОЛНИЛ НАШИ
+              СТРОЙНЫЕ РЯДЫ</p>
+            <time datetime="2019-01-18">18 января</time>
+          </li>
+        </ul>
+        <a class="button" href="news.html">Все новости</a>
+      </section>
 
-    <section class="gallery">
-      <h2>Фотогалерея</h2>
-      <figure class="gallery-content">
-        <a href="#"><img src="img/studio.jpg" width="286" height="164" alt="Интерьер"></a>
-      </figure>
-      <button class="button gallery-button gallery-button-back" type="button">Назад</button>
-      <button class="button gallery-button gallery-button-next" type="button">Вперед</button>
-    </section>
+      <section class="gallery">
+        <h2>Фотогалерея</h2>
+        <figure class="gallery-content">
+          <a href="#"><img src="img/studio.jpg" width="286" height="164" alt="Интерьер"></a>
+        </figure>
+        <button class="button gallery-button gallery-button-back" type="button">Назад</button>
+        <button class="button gallery-button gallery-button-next" type="button">Вперед</button>
+      </section>
+    </div>
 
-    <section>
-      <h2>Контактная иформация</h2>
-      <p>БАРБЕРШОП «БОРОДИНСКИЙ»<br>
-        АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, Б. КОНЮШЕННАЯ, Д. 19/8<br>
-        ТЕЛЕФОН: +7 (495) 666-02-66
-      </p>
-      <p>
-        ВРЕМЯ РАБОТЫ: <br>
-        ПН—ПТ: С 10:00 ДО 22:00 <br>
-        СБ—ВС: С 10:00 ДО 19:00
-      </p>
-      <a href="map.html">Как проехать</a>
-      <a href="contacts.html">Обратная связь</a>
-    </section>
+    <div class="index-columns">
+      <section>
+        <h2>Контактная иформация</h2>
+        <p>БАРБЕРШОП «БОРОДИНСКИЙ»<br>
+          АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, Б. КОНЮШЕННАЯ, Д. 19/8<br>
+          ТЕЛЕФОН: +7 (495) 666-02-66
+        </p>
+        <p>
+          ВРЕМЯ РАБОТЫ: <br>
+          ПН—ПТ: С 10:00 ДО 22:00 <br>
+          СБ—ВС: С 10:00 ДО 19:00
+        </p>
+        <a class="button" href="map.html">Как проехать</a>
+        <a class="button" href="contacts.html">Обратная связь</a>
+      </section>
 
-    <section class="appointment">
-      <h2>Записаться</h2>
-      <p class="appointment-info">УКАЖИТЕ ЖЕЛАЕМУЮ ДАТУ И ВРЕМЯ И МЫ СВЯЖЕМСЯ С ВАМИ ДЛЯ ПОДТВЕРЖДЕНИЯ БРОНИ</p>
-      <form action="https://echo.htmlacademy.ru" method="post">
-        <p>
-          <label for="appointment-date">Дата</label>
-          <input id="appointment-date" type="text" name="date" value="" placeholder="08.10.2017">
-        </p>
-        <p>
-          <label for="appointment-time">Время</label>
-          <input id="appointment-time" typt="text" name="time" value="" placeholder="10:00">
-        </p>
-        <p>
-          <label for="appointment-name">Ваше имя</label>
-          <input id="appointment-name" type="text" name="name" value="" placeholder="Никита">
-        </p>
-        <p>
-          <label for="appointment-phone">Телефон</label>
-          <input id="appointment-phone" type="tel" name="phone" value="" placeholder="+7 701 323-0-333">
-        </p>
-        <button type="submit">Отправить</button>
-      </form>
-    </section>
+      <section class="appointment">
+        <h2>Записаться</h2>
+        <p class="appointment-info">УКАЖИТЕ ЖЕЛАЕМУЮ ДАТУ И ВРЕМЯ И МЫ СВЯЖЕМСЯ С ВАМИ ДЛЯ ПОДТВЕРЖДЕНИЯ БРОНИ</p>
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <p>
+            <label for="appointment-date">Дата</label>
+            <input id="appointment-date" type="text" name="date" value="" placeholder="08.10.2017">
+          </p>
+          <p>
+            <label for="appointment-time">Время</label>
+            <input id="appointment-time" typt="text" name="time" value="" placeholder="10:00">
+          </p>
+          <p>
+            <label for="appointment-name">Ваше имя</label>
+            <input id="appointment-name" type="text" name="name" value="" placeholder="Никита">
+          </p>
+          <p>
+            <label for="appointment-phone">Телефон</label>
+            <input id="appointment-phone" type="tel" name="phone" value="" placeholder="+7 701 323-0-333">
+          </p>
+          <button class="button" type="submit">Отправить</button>
+        </form>
+      </section>
+    </div>
   </main>
 
   <footer>
@@ -125,22 +132,22 @@
 
     <div>
       <p>Давайте дружить!</p>
-      <ul>
-        <li><a href="#">Вконтакте</a></li>
-        <li><a href="#">Фейсбук</a></li>
-        <li><a href="#">Инстаграм</a></li>
+      <ul class="footer-social">
+        <li><a class="social-button" href="#">Вконтакте</a></li>
+        <li><a class="social-button" href="#">Фейсбук</a></li>
+        <li><a class="social-button" href="#">Инстаграм</a></li>
       </ul>
     </div>
 
-    <p>Разработано:
-      <a href="https://htmlacademy.ru">HTML Academy</a>
+    <p class="footer-copyright">Разработано:
+      <a class="button" href="https://htmlacademy.ru">HTML Academy</a>
     </p>
   </footer>
 
-  <section>
+  <section class="modal">
     <h2>Личный кабинет</h2>
     <p>Введите свой логиин и пароль.</p>
-    <form action="https://echo.htmlacademy.ru" method="post">
+    <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
       <p>
         <label for="user-login">Логин</label>
         <input id="user-login" type="text" name="login" placeholder="email@example.com">
@@ -150,16 +157,16 @@
         <input id="user-password" type="password" name="password" placeholder="*****">
       </p>
       <p>
-        <input id="login-password-info" type="checkbox" name="remember">
+        <input class="login-checkbox" id="login-password-info" type="checkbox" name="remember">
         <label for="login-password-info">Запомните меня</label>
         <a href="#">Я забыл пароль!</a>
       </p>
-      <button type="submit">Войти</button>
+      <button class="button" type="submit">Войти</button>
     </form>
     <button type="button">Закрыть</button>
   </section>
 
-  <section>
+  <section class="restore">
     <h2>Как до нас добраться</h2>
     <p>
       <img src="img/map.jpg" width="780" height="560"
