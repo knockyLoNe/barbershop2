@@ -4,13 +4,16 @@
 <head>
   <meta charset="utf-8">
   <title>Барбершоп "Бородинский"</title>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+  <link href="css/normalize.css.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="inner-page">
   <header class="main-header">
     <nav class="main-navigation">
       <a class="main-header-logo" href="index.html">
-        <img src="img/index-logo.svg" width="111" height="24" alt="Логотип барбершопа Бородинский">
+        <img src="img/logo.png" alt="Логотип барбершопа Бородинский">
       </a>
       <ul class="site-navigation">
         <li><a href="info.html">Информация</a></li>
@@ -22,11 +25,12 @@
 
       <ul class="user-navigation">
         <li class="login-link">
-          <button type="button">Войти</button>
+          <a href="login.html">Войти</a>
         </li>
       </ul>
     </nav>
   </header>
+
 
   <main class="container">
 
@@ -36,7 +40,7 @@
       <li><a href="index.html">Главная</a></li>
       <li><a href="#">Магазин</a></li>
       <li><a href="#">Средства для ухода</a></li>
-      <li class="breadcrumbbs-current">Набор для путешествий «Baxter of California»</li>
+      <li class="breadrcumbs-current">Набор для путешествий «Baxter of California»</li>
     </ul>
 
     <section class="product-photos">
@@ -78,14 +82,53 @@
       </ul>
     </section>
 
-    <section class="modal modal-login">
+    <footer>
+      <p>БАРБЕРШОП «БОРОДИНСКИЙ»<br>
+        АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, УЛ. Б. КОНЮШЕННАЯ, Д. 19/8<br>
+        <a href="map.html">КАК НАС НАЙТИ?</a><br>
+        ТЕЛЕФОН: +7 (495) 666-02-66
+      </p>
+
+      <div>
+        <p>Давайте дружить!</p>
+        <ul class="footer-social">
+          <li><a class="social-button" href="#">Вконтакте</a></li>
+          <li><a class="social-button" href="#">Фейсбук</a></li>
+          <li><a class="social-button" href="#">Инстаграм</a></li>
+        </ul>
+      </div>
+
+      <p class="footer-copyright">Разработано:
+        <a class="button" href="https://htmlacademy.ru">HTML Academy</a>
+      </p>
+    </footer>
+
+    <section class="modal">
       <h2>Личный кабинет</h2>
       <p>Введите свой логиин и пароль.</p>
-      <!-- Здесь будет форма -->
+      <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label for="user-login">Логин</label>
+          <input id="user-login" type="text" name="login" placeholder="email@example.com">
+        </p>
+        <p>
+          <Label for="user-password">Пароль</Label>
+          <input id="user-password" type="password" name="password" placeholder="*****">
+        </p>
+        <p>
+          <input class="login-checkbox" id="login-password-info" type="checkbox" name="remember">
+          <label for="login-password-info">Запомните меня</label>
+          <a href="#">Я забыл пароль!</a>
+        </p>
+        <button class="button" type="submit">Войти</button>
+      </form>
       <button type="button">Закрыть</button>
     </section>
 
   </main>
 </body>
+
+
+
 
 </html>
