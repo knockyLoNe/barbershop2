@@ -15,26 +15,30 @@
       <a class="main-header-logo" href="index.html">
         <img src="img/index-logo.png" alt="Логотип барбершопа Бородинский">
       </a>
-      <ul class="site-navigation">
-        <li><a href="info.html">Информация</a></li>
-        <li><a href="news.html">Новости</a></li>
-        <li><a href="price.html">Прайс-лист</a></li>
-        <li><a href="catalog.html">Магазин</a></li>
-        <li><a href="contacts.html">Контакты</a></li>
-      </ul>
+      <div class="main-navigation-wrapper">
+        <div class="container">
+          <ul class="site-navigation">
+            <li><a href="info.html">Информация</a></li>
+            <li><a href="news.html">Новости</a></li>
+            <li><a href="price.html">Прайс-лист</a></li>
+            <li><a href="catalog.html">Магазин</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+          </ul>
 
-      <ul class="user-navigation">
-        <li class="login-link">
-          <a href="login.html">Войти</a>
-        </li>
-      </ul>
+          <ul class="user-navigation">
+            <li class="login-link">
+              <a href="login.html">Войти</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
 
-  <main>
+  <main class="container">
     <h1>Барбершоп Бородинский</h1>
 
-    <section>
+    <section class="features">
       <h2>Преимущества</h2>
       <ul class="feature-list">
         <li class="feature-item">
@@ -82,7 +86,7 @@
     </div>
 
     <div class="index-columns">
-      <section>
+      <section class="contacts">
         <h2>Контактная иформация</h2>
         <p>БАРБЕРШОП «БОРОДИНСКИЙ»<br>
           АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, Б. КОНЮШЕННАЯ, Д. 19/8<br>
@@ -124,24 +128,26 @@
   </main>
 
   <footer>
-    <p>БАРБЕРШОП «БОРОДИНСКИЙ»<br>
-      АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, УЛ. Б. КОНЮШЕННАЯ, Д. 19/8<br>
-      <a href="map.html">КАК НАС НАЙТИ?</a><br>
-      ТЕЛЕФОН: +7 (495) 666-02-66
-    </p>
+    <div class="container">
+      <p class="footer-contacts">БАРБЕРШОП «БОРОДИНСКИЙ»<br>
+        АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, УЛ. Б. КОНЮШЕННАЯ, Д. 19/8<br>
+        <a href="map.html">КАК НАС НАЙТИ?</a><br>
+        ТЕЛЕФОН: +7 (495) 666-02-66
+      </p>
 
-    <div>
-      <p>Давайте дружить!</p>
-      <ul class="footer-social">
-        <li><a class="social-button" href="#">Вконтакте</a></li>
-        <li><a class="social-button" href="#">Фейсбук</a></li>
-        <li><a class="social-button" href="#">Инстаграм</a></li>
-      </ul>
+      <div class="footer-social">
+        <p>Давайте дружить!</p>
+        <ul>
+          <li><a class="social-button" href="#">Вконтакте</a></li>
+          <li><a class="social-button" href="#">Фейсбук</a></li>
+          <li><a class="social-button" href="#">Инстаграм</a></li>
+        </ul>
+      </div>
+
+      <p class="footer-copyright">Разработано:
+        <a class="button" href="https://htmlacademy.ru">HTML Academy</a>
+      </p>
     </div>
-
-    <p class="footer-copyright">Разработано:
-      <a class="button" href="https://htmlacademy.ru">HTML Academy</a>
-    </p>
   </footer>
 
   <section class="modal">
