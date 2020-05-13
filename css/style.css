@@ -58,6 +58,8 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  background-color: transparent;
 }
 
 .main-header-logo {
@@ -670,8 +672,9 @@ footer a:focus {
 
 .footer-social b {
   display: block;
-  margin-bottom: 15px;
   margin: 0;
+  margin-bottom: 15px;
+
   text-align: center;
 }
 
