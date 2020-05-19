@@ -51,7 +51,12 @@ a {
 }
 
 .main-header {
+
   margin-bottom: 75px;
+}
+
+.header-menu {
+  background-color: #000000;
 }
 
 .main-navigation {
@@ -558,6 +563,10 @@ footer .container {
 
 }
 
+.filter-option>input {
+  display: none;
+}
+
 .filter-option label {
   position: relative;
 
@@ -658,6 +667,9 @@ footer .container {
 }
 
 .catalog-item {
+  display: flex;
+  flex-direction: column;
+
   width: 220px;
   margin-bottom: 20px;
   margin-right: 20px;
@@ -684,15 +696,36 @@ footer .container {
 .catalog-item h3 {
   order: 1;
 
+  margin-top: 17px;
+  margin-bottom: 12px;
+  margin-left: 16px;
+  margin-right: 15px;
+
   font-size: 14px;
   line-height: 18px;
+}
+
+.catalog-item-image {
+  width: 220px;
+  height: 165px;
+  margin: 0;
 }
 
 .catalog-category {
   text-transform: none;
 }
 
+.catalog-item-price {
+  order: 2;
+  display: flex;
+  margin: 15px;
+  margin-top: 0;
+}
+
 .catalog-item-price b {
+  width: 112px;
+  padding: 13px 25px 11px;
+
   font-size: 14px;
   line-height: 20px;
   text-align: center;
@@ -701,15 +734,41 @@ footer .container {
 }
 
 .catalog-item-price .button {
+  width: 50px;
+  padding: 13px 18px 11px;
+  margin-right: 0;
+
   font-size: 20px;
   color: #ffffff;
 }
 
 .pagination-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
+.pagination-item {
+  margin-right: 5px;
+}
+
+.pagination-item-current {
+  margin-right: 5px;
+}
+
+.pagination-item:last-child {
+  margin-right: 0;
+}
+
 .pagination-item a {
+  display: block;
+  padding: 10px 19px;
+
+
   color: #ffffff;
   background-color: #000000;
 }
@@ -721,11 +780,18 @@ footer .container {
 }
 
 .pagination-item-current a {
+  display: block;
+  padding: 10px 19px;
+
   color: #000000;
   background-color: #ffffff;
 }
 
 .product-photo-preview {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
@@ -735,13 +801,28 @@ footer .container {
 
 .product-info {
   width: 390px;
+  padding-top: 23px;
 }
 
 .product-photo-preview li {
+  width: 140px;
+  height: 149px;
+  margin-right: 20px;
+
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
 }
 
+.product-photo-preview li:nth-child(3n) {
+  margin-right: 0;
+}
+
 .product-photo-full {
+  width: 460px;
+  height: 498px;
+
+  margin: 0;
+  margin-bottom: 20px;
+
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
 }
 
@@ -751,19 +832,83 @@ footer .container {
 }
 
 .product-price b {
+  width: 112px;
+  padding-top: 13px;
+  padding-left: 36px;
+  padding-right: 36px;
+  padding-bottom: 11px;
+
   line-height: 20px;
   text-align: center;
 
   background-color: #e5e5e5;
+
+  box-sizing: border-box;
+}
+
+.product-price .button {
+  padding-left: 17px;
+  padding-right: 17px;
 }
 
 .product-info h3 {
+  margin: 0;
+  margin-bottom: 27px;
+
   font-size: 24px;
   line-height: 30px;
 }
 
 .product-info ul {
+  margin: 0;
+  padding: 0;
+
   list-style: none;
+}
+
+.product-info li {
+  position: relative;
+  padding-left: 23px;
+}
+
+.product-info li::before {
+  content: "";
+
+  position: absolute;
+
+  top: 7px;
+  left: 2px;
+
+  width: 8px;
+  height: 8px;
+
+  background-color: #000000;
+  transform: rotate(45deg);
+}
+
+.product-info p {
+  margin: 0;
+}
+
+.product-info .product-text {
+  margin-bottom: 35px;
+}
+
+.product-description {
+  display: flex;
+  justify-content: space-between;
+
+  padding-right: 10px;
+  margin-bottom: 29px;
+}
+
+.product-description p {
+  width: 200px;
+}
+
+.product-info .product-price {
+  display: flex;
+  margin-bottom: 63px;
 }
 
 footer {
@@ -891,4 +1036,200 @@ footer a:focus {
 .restore h2 {
   font-size: 30px;
   line-height: 42px;
+}
+
+.modal {
+  position: fixed;
+
+  color: #000000;
+
+  background-color: #f8f3f0;
+  background-image: url(../img/pattern-light.jpg);
+  background-position: 0 0;
+  background-repeat: repeat;
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+}
+
+.modal-login {
+  display: none;
+  top: 120px;
+  left: 50%;
+
+  width: 300px;
+  margin-left: -230px;
+  padding: 50px 80px;
+}
+
+.modal-close {
+  position: absolute;
+
+  top: 0;
+  left: 470px;
+
+  width: 22px;
+  height: 22px;
+
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.modal-close::before,
+.modal-close::after {
+  content: "";
+
+  position: absolute;
+  top: 10px;
+  left: 2px;
+
+  width: 19px;
+  height: 3px;
+
+  background-color: #d0d0d0;
+}
+
+.modal-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-close::after {
+  transform: rotate(-45deg);
+}
+
+.modal-login h2 {
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.modal-description {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.login-form p {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 15px;
+  padding-right: 40px;
+
+  font: inherit;
+  color: #000000;
+  text-transform: uppercase;
+
+  background-color: #f9f6f3;
+  border: 2px solid #000000;
+}
+
+.login-form input:focus {
+  border-color: #663d15;
+}
+
+.login-icon-user {
+  background-image: url(../img/user.png);
+  background-position: 270px center;
+  background-repeat: no-repeat;
+}
+
+.login-icon-password {
+  background-image: url(../img/lock.png);
+  background-position: 270px center;
+  background-repeat: no-repeat;
+}
+
+.login-form .login-help {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+
+.login-checkbox {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.login-checkbox input[type="checkbox"]+.checkbox-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 17px;
+  height: 17px;
+
+  border: 2px solid #000000;
+}
+
+.login-checkbox input[type="checkbox"]:focus+.checkbox-indicator {
+  border-color: #663d15;
+  outline: thin dotted;
+  outline: 5px auto -webbkit-focus-ring-color;
+}
+
+.login-checkbox input[type="checkbox"]:checked+.checkbox-indicator::before,
+.login-checkbox input[type="checkbox"]:checked+.checkbox-indicator::after {
+  content: "";
+
+  position: absolute;
+  top: 8px;
+  left: 1px;
+
+  width: 15px;
+  height: 2px;
+
+  background-color: #000000;
+}
+
+.login-checkbox input[type="checkbox"]:checked+.checkbox-indicator::before {
+  transform: rotate(45deg);
+}
+
+.login-checkbox input[type="checkbox"]:checked+.checkbox-indicator::after {
+  transform: rotate(-45deg);
+}
+
+.login-help>input {
+  display: none;
+}
+
+.restore {
+  color: #000000;
+  text-decoration: underline;
+}
+
+.restore:hover,
+.restore:focus {
+  text-decoration: none;
+}
+
+.login-form .button {
+  width: 100%;
+  margin-right: 0;
+}
+
+.modal-map {
+  top: 50%;
+  left: 50%;
+
+  display: none;
+  width: 766px;
+  height: 561px;
+
+  margin-top: -280px;
+  margin-left: -390px;
+
+  border: 7px solid white;
+}
+
+.modal-map p {
+  margin: 0;
 }
