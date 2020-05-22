@@ -1205,7 +1205,7 @@ footer a:focus {
 
 .modal {
   position: fixed;
-
+  display: none;
   color: #000000;
 
   background-color: #f8f3f0;
@@ -1215,8 +1215,11 @@ footer a:focus {
   box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
 }
 
+.modal-show {
+  display: block;
+}
+
 .modal-login {
-  display: none;
   top: 120px;
   left: 50%;
 
@@ -1224,6 +1227,9 @@ footer a:focus {
   margin-left: -230px;
   padding: 50px 80px;
 }
+
+
+
 
 .modal-close {
   position: absolute;
