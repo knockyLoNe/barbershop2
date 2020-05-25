@@ -1215,8 +1215,30 @@ footer a:focus {
   box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
 }
 
+.modal-map {
+  top: 50%;
+  left: 50%;
+
+  display: none;
+  width: 766px;
+  height: 561px;
+
+  margin-top: -280px;
+  margin-left: -390px;
+
+  border: 7px solid white;
+}
+
+
+
 .modal-show {
   display: block;
+
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
 
 .modal-login {
@@ -1266,6 +1288,46 @@ footer a:focus {
 .modal-close::after {
   transform: rotate(-45deg);
 }
+
+/* Кнопка закрытия карты */
+
+.modal-close-button {
+  position: absolute;
+
+  top: -5px;
+  left: 780px;
+
+  width: 22px;
+  height: 22px;
+
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.modal-close-button::before,
+.modal-close-button::after {
+  content: "";
+
+  position: absolute;
+  top: 10px;
+  left: 2px;
+
+  width: 19px;
+  height: 3px;
+
+  background-color: #d0d0d0;
+}
+
+.modal-close-button::before {
+  transform: rotate(45deg);
+}
+
+.modal-close-button::after {
+  transform: rotate(-45deg);
+}
+
+/* ------- */
 
 .modal-login h2 {
   margin: 0;
@@ -1387,20 +1449,63 @@ footer a:focus {
   margin-right: 0;
 }
 
-.modal-map {
-  top: 50%;
-  left: 50%;
 
-  display: none;
-  width: 766px;
-  height: 561px;
 
-  margin-top: -280px;
-  margin-left: -390px;
+/* Анимацая для всплывашки */
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
 
-  border: 7px solid white;
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+/* Карта */
+
+.modal-map iframe {
+  position: relative;
+  z-index: 2;
+
+  border: none;
 }
 
 .modal-map p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
   margin: 0;
 }
